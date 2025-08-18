@@ -9,9 +9,8 @@ import subprocess
 
 def get_all_models():
     models_response = ollama.list()
-    print("Available Models:", models_response)
     models = models_response["models"]
-    return [m["model"] for m in models]
+    return [m["model"] for m in models if "latest" in m["model"]]
 
 
 # Initalize required parameters
@@ -94,3 +93,42 @@ def report_resource_usage(peak_metrics, response_data, is_simulation=False):
     response_data["peak_memory"] = f"{peak_metrics['memory']} MiB"
     response_data["peak_cpu"] = f"{peak_metrics['cpu']} %"
     response_data["responses"] = True
+
+
+# Continuously monitor resource usage (memory, CPU, power) and update peak metrics accordingly
+def monitor_resources(peak_metrics):
+    while peak_metrics.get("monitor", False):
+        loop_start = time.time()
+        current_mem, current_cpu, current_power = get_current_resource_usage()
+        update_peak_metrics(peak_metrics, current_mem, current_cpu)
+
+        # If power available, accumulate instantaneous energy
+        if current_power is not None:
+            elapsed = time.time() - loop_start
+            instantaneous_energy = get_energy_usage(current_power, elapsed)
+            peak_metrics["energy"] += instantaneous_energy
+
+        time.sleep(0.1)
+
+
+# Get the response from the LLM model
+def get_response_from_ollama(response_data, peak_metrics):
+    question = response_data.get("question", "")
+    model = response_data.get("model", "")
+    if not question:
+        response_data["response"] = "Please ask a question"
+        peak_metrics["monitor"] = False
+        return
+
+    try:
+        resp = ollama.chat(
+            model=model,
+            messages=[{"role": "user", "content": question}],
+            options={"temperature": 0.7},
+        )
+        response = resp["message"]["content"]
+    except Exception as e:
+        response = f"Error calling model '{model}': {e}"
+
+    response_data["response"] = response
+    peak_metrics["monitor"] = False
