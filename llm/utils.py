@@ -10,7 +10,7 @@ import subprocess
 def get_all_models():
     models_response = ollama.list()
     models = models_response["models"]
-    return [m["model"] for m in models if "latest" in m["model"]]
+    return [m["model"] for m in models]
 
 
 # Initalize required parameters

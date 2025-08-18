@@ -67,8 +67,6 @@ def start_threads(response_data, is_simulation=False):
 def simulate():
     clear_all_metrics()
     questions = list_questions()  # from Redis (seeded via text file)
-    questions = questions[:1]
-    print(questions)
     models = get_all_models()  # live from Ollama
     if not questions or not models:
         print("No questions or models available for simulation.")
