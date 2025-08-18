@@ -96,17 +96,12 @@
             {% csrf_token %}
             <label for="model">Choose a model:</label>
             <select name="model" id="model">
-                {% for value, name in model_choices.items %}
+                {% for name in model_choices %}
                     <!-- <option value="{{ value }}">{{ name }}</option> -->
-                    <option value="{{ value }}" {% if value == selected_model %}selected{% endif %}>
+                    <option value="{{ name }}" {% if name == selected_model %}selected{% endif %}>
                         {{ name }}
                     </option>
                 {% endfor %}
-                <!-- <option value="mistral:instruct">Mistral: Instruct</option>
-                <option value="llama2:latest">Llama2: latest</option>
-                <option value="llama2:13b">Llama2: 13b</option>
-                <option value="orca2:13b">Orca2: 13b</option>
-                <option value="vicuna:13b">Vicuna: 13b</option> -->
             </select>
             <label for="question">Question:</label>
             <input type="text" id="question" value="{{ question }}" name="question">

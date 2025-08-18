@@ -1,0 +1,23 @@
+# Environments
+env/
+venv/
+.venv/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Django/Flask stuff
+db.sqlite3
+
+# Redis dumps
+dump.rdb
