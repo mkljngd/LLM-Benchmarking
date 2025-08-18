@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LLM Query - Modern and Minimalist</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #7E57C2, #ECEFF1);
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            margin: 0;
+            color: #263238;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            width: 40vw;
+            margin-top: 50px;
+        }
+        .title {
+            font-size: 28px;
+            text-align: center;
+            color: #263238;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        select, input[type="text"], textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            color: #263238;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #4FC3F7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #29B6F6;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+            background-color: #f9f9f9;
+            color: #555;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #7E57C2;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="title">LLM Benchmarks</div>
+        <form method="post">
+            {% csrf_token %}
+            <label for="model">Choose a model:</label>
+            <select name="model" id="model">
+                {% for value, name in model_choices.items %}
+                    <!-- <option value="{{ value }}">{{ name }}</option> -->
+                    <option value="{{ value }}" {% if value == selected_model %}selected{% endif %}>
+                        {{ name }}
+                    </option>
+                {% endfor %}
+                <!-- <option value="mistral:instruct">Mistral: Instruct</option>
+                <option value="llama2:latest">Llama2: latest</option>
+                <option value="llama2:13b">Llama2: 13b</option>
+                <option value="orca2:13b">Orca2: 13b</option>
+                <option value="vicuna:13b">Vicuna: 13b</option> -->
+            </select>
+            <label for="question">Question:</label>
+            <input type="text" id="question" value="{{ question }}" name="question">
+            <input type="submit" value="Submit">
+        </form>
+        {% if response %}
+            <div class="response">
+                <label for="response">Response:</label>
+                <textarea id="response" name="response" readonly>{{ response }}</textarea>
+                <table>
+                    <tr>
+                        <th>Execution Time</th>
+                        <th>Memory Used</th>
+                        <th>Energy Used</th>
+                        <th>CPU Used</th>
+                        <th>Peak Memory</th>
+                        <th>Peak CPU</th>
+                    </tr>
+                    <tr>
+                        <td>{{ execution_time }}</td>
+                        <td>{{ memory_used }}</td>
+                        <td>{{ energy_used }}</td>
+                        <td>{{ cpu_used }}</td>
+                        <td>{{ peak_memory }}</td>
+                        <td>{{ peak_cpu }}</td>
+
+                    </tr>
+                </table>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

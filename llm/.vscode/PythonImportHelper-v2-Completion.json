@@ -1,0 +1,611 @@
+[
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "psutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "psutil",
+        "description": "psutil",
+        "detail": "psutil",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "Ollama",
+        "importPath": "llama_index.llms",
+        "description": "llama_index.llms",
+        "isExtraImport": true,
+        "detail": "llama_index.llms",
+        "documentation": {}
+    },
+    {
+        "label": "memory_usage",
+        "importPath": "memory_profiler",
+        "description": "memory_profiler",
+        "isExtraImport": true,
+        "detail": "memory_profiler",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "llm.models",
+        "description": "llm.models",
+        "isExtraImport": true,
+        "detail": "llm.models",
+        "documentation": {}
+    },
+    {
+        "label": "Question",
+        "importPath": "llm.models",
+        "description": "llm.models",
+        "isExtraImport": true,
+        "detail": "llm.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "llm.models",
+        "description": "llm.models",
+        "isExtraImport": true,
+        "detail": "llm.models",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "migrations.0001_initial",
+        "description": "migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Question',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('question', models.CharField(max_length=255)),",
+        "detail": "migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "migrations.0002_alter_question_question",
+        "description": "migrations.0002_alter_question_question",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('llm', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='question',\n            name='question',\n            field=models.CharField(max_length=500),\n        ),",
+        "detail": "migrations.0002_alter_question_question",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "migrations.0003_model_response",
+        "description": "migrations.0003_model_response",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('llm', '0002_alter_question_question'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Model',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('model_name', models.CharField(max_length=255)),",
+        "detail": "migrations.0003_model_response",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "migrations.0004_model_model_value_alter_model_parameters",
+        "description": "migrations.0004_model_model_value_alter_model_parameters",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('llm', '0003_model_response'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='model',\n            name='model_value',\n            field=models.CharField(blank=True, max_length=255, null=True),\n        ),",
+        "detail": "migrations.0004_model_model_value_alter_model_parameters",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "asgi",
+        "description": "asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Question",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class Question(models.Model):\n    question = models.CharField(max_length=500)\n# Used to store details about each LLM model\nclass Model(models.Model):\n    model_name = models.CharField(max_length=255)\n    model_value = models.CharField(max_length=255, null=True, blank=True)\n    parameters = models.CharField(max_length=255, null=True, blank=True)\n# Used to store response detail for all unique pairs of LLM model and question\nclass Response(models.Model):\n    question = models.ForeignKey(Question, on_delete=models.CASCADE)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class Model(models.Model):\n    model_name = models.CharField(max_length=255)\n    model_value = models.CharField(max_length=255, null=True, blank=True)\n    parameters = models.CharField(max_length=255, null=True, blank=True)\n# Used to store response detail for all unique pairs of LLM model and question\nclass Response(models.Model):\n    question = models.ForeignKey(Question, on_delete=models.CASCADE)\n    model = models.ForeignKey(Model, on_delete=models.CASCADE)\n    execution_time = models.FloatField(null=True, blank=True, default=None)\n    energy_usage = models.FloatField(null=True, blank=True, default=None)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class Response(models.Model):\n    question = models.ForeignKey(Question, on_delete=models.CASCADE)\n    model = models.ForeignKey(Model, on_delete=models.CASCADE)\n    execution_time = models.FloatField(null=True, blank=True, default=None)\n    energy_usage = models.FloatField(null=True, blank=True, default=None)\n    memory_usage = models.FloatField(null=True, blank=True, default=None)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = \"django-insecure-6=r#dp-pxh1^=-zg3*6&(1fg4ee+y#c-8q4_=5b#bm7kguzmxs\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "SECRET_KEY = \"django-insecure-6=r#dp-pxh1^=-zg3*6&(1fg4ee+y#c-8q4_=5b#bm7kguzmxs\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"llm\",",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"llm\",\n    \"debug_toolbar\",\n]",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "MIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n    \"debug_toolbar.middleware.DebugToolbarMiddleware\",\n]",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "ROOT_URLCONF = \"llm.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "WSGI_APPLICATION = \"llm.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\n# DATABASES = {\n#     \"default\": {\n#         \"ENGINE\": \"django.db.backends.sqlite3\",\n#         \"NAME\": BASE_DIR / \"db.sqlite3\",\n#     }\n# }\nDATABASES = {",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.postgresql\",\n        \"NAME\": \"llm\",\n        \"USER\": \"stark\",\n        \"PASSWORD\": \"password\",\n        \"HOST\": \"localhost\",\n        \"PORT\": \"5432\",\n    }\n}",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\",\n    },",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# INTERNAL_IPS = [\"127.0.0.1\"]",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# INTERNAL_IPS = [\"127.0.0.1\"]",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# INTERNAL_IPS = [\"127.0.0.1\"]",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "STATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# INTERNAL_IPS = [\"127.0.0.1\"]",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# INTERNAL_IPS = [\"127.0.0.1\"]",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "urls",
+        "description": "urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", views.index, name=\"index\"),  # Include the URLs from the llm app\n]",
+        "detail": "urls",
+        "documentation": {}
+    },
+    {
+        "label": "get_response_from_ollama",
+        "kind": 2,
+        "importPath": "views",
+        "description": "views",
+        "peekOfCode": "def get_response_from_ollama(response_data, peak_metrics):\n    question = response_data[\"question\"]\n    model = response_data[\"model\"]\n    print(\"Received Question:\", question)\n    if not question:\n        response_data[\"response\"] = \"Please ask a question\"\n    else:\n        print(\"Running Model:\", model)\n        llm = Ollama(model=model)\n        response = llm.complete(question)",
+        "detail": "views",
+        "documentation": {}
+    },
+    {
+        "label": "monitor_resources",
+        "kind": 2,
+        "importPath": "views",
+        "description": "views",
+        "peekOfCode": "def monitor_resources(peak_metrics):\n    while peak_metrics[\"monitor\"]:\n        start_time = time.time()\n        current_mem, current_cpu, current_power = get_current_resource_usage()\n        update_peak_metrics(peak_metrics, current_mem, current_cpu)\n        instantaneous_energy = get_energy_usage(current_power, time.time() - start_time)\n        peak_metrics[\"energy\"] += instantaneous_energy\n        time.sleep(0.1)\n# Get current memory usage, CPU usage, and power consumption\ndef get_current_resource_usage():",
+        "detail": "views",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_resource_usage",
+        "kind": 2,
+        "importPath": "views",
+        "description": "views",
+        "peekOfCode": "def get_current_resource_usage():\n    current_mem = memory_usage(-1, interval=0.1, timeout=1)[0]\n    current_cpu = psutil.cpu_percent(interval=0.1)\n    current_power = get_power()\n    return current_mem, current_cpu, current_power\ndef update_peak_metrics(peak_metrics, current_mem, current_cpu):\n    peak_metrics[\"memory\"] = max(peak_metrics[\"memory\"], current_mem)\n    peak_metrics[\"cpu\"] = max(peak_metrics[\"cpu\"], current_cpu)\n# Get power usage using mac shell command\ndef get_power():",
+        "detail": "views",
+        "documentation": {}
+    },
+    {
+        "label": "update_peak_metrics",
+        "kind": 2,
+        "importPath": "views",
+        "description": "views",
+        "peekOfCode": "def update_peak_metrics(peak_metrics, current_mem, current_cpu):\n    peak_metrics[\"memory\"] = max(peak_metrics[\"memory\"], current_mem)\n    peak_metrics[\"cpu\"] = max(peak_metrics[\"cpu\"], current_cpu)\n# Get power usage using mac shell command\ndef get_power():\n    # Define the command to run with sudo\n    sudo_command = \"sudo powermetrics -n 1 | grep 'Combined Power'\"\n    # Run the sudo command and capture the output\n    output = subprocess.check_output(sudo_command, shell=True, universal_newlines=True)\n    # Regular expression pattern to find a number followed by ' mW'",
+        "detail": "views",
+        "documentation": {}
+    },
+    {
+        "label": "get_power",
+        "kind": 2,
+        "importPath": "views",
+        "description": "views",
+        "peekOfCode": "def get_power():\n    # Define the command to run with sudo\n    sudo_command = \"sudo powermetrics -n 1 | grep 'Combined Power'\"\n    # Run the sudo command and capture the output\n    output = subprocess.check_output(sudo_command, shell=True, universal_newlines=True)\n    # Regular expression pattern to find a number followed by ' mW'\n    pattern = r\"(\\d+)\\s*mW\"\n    # Search for the pattern in the string\n    match = re.search(pattern, output)\n    power_value = None",
+        "detail": "views",
+        "documentation": {}
+    },
+    {
+        "label": "get_energy_usage",
+        "kind": 2,
+        "importPath": "views",
+        "description": "views",
+        "peekOfCode": "def get_energy_usage(current_power, time=10):\n    # Convert power to watts (1 watt = 1000 milliwatts)\n    power_W = current_power / 1000\n    energy_joules = power_W * time\n    return energy_joules\ndef index(request):\n    model_choices = {x.model_value: x.model_name for x in Model.objects.all()}\n    selected_model = Model.objects.all().first().model_value\n    print(\"MODEL_CHOICES\", model_choices)\n    response_data = {",
+        "detail": "views",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "views",
+        "description": "views",
+        "peekOfCode": "def index(request):\n    model_choices = {x.model_value: x.model_name for x in Model.objects.all()}\n    selected_model = Model.objects.all().first().model_value\n    print(\"MODEL_CHOICES\", model_choices)\n    response_data = {\n        \"response\": \"\",\n        \"question\": \"\",\n        \"responses\": False,\n        \"model_choices\": model_choices,\n        \"selected_model\": selected_model,",
+        "detail": "views",
+        "documentation": {}
+    },
+    {
+        "label": "initialize_peak_metrics",
+        "kind": 2,
+        "importPath": "views",
+        "description": "views",
+        "peekOfCode": "def initialize_peak_metrics(start_power):\n    return {\n        \"memory\": 0,\n        \"cpu\": 0,\n        \"monitor\": True,\n        \"start_time\": time.time(),\n        \"start_mem\": memory_usage(-1, interval=0.1, timeout=1)[0],\n        \"start_cpu\": psutil.cpu_percent(interval=None),\n        \"end_power\": start_power,\n        \"energy\": 0,",
+        "detail": "views",
+        "documentation": {}
+    },
+    {
+        "label": "report_resource_usage",
+        "kind": 2,
+        "importPath": "views",
+        "description": "views",
+        "peekOfCode": "def report_resource_usage(peak_metrics, response_data, is_simulation=False):\n    end_cpu = psutil.cpu_percent(interval=None)\n    end_time = time.time()\n    end_mem = round(memory_usage(-1, interval=0.1, timeout=1)[0], 2)\n    execution_time = round(end_time - peak_metrics[\"start_time\"], 2)\n    peak_metrics[\"energy\"] = abs(round(peak_metrics[\"energy\"], 2))\n    memory_used = abs(round(end_mem - peak_metrics[\"start_mem\"], 2))\n    cpu_used = abs(round(end_cpu - peak_metrics[\"start_cpu\"], 2))\n    peak_metrics[\"memory\"] = abs(round(peak_metrics[\"memory\"], 2))\n    print(f\"Execution time: {execution_time} seconds\")",
+        "detail": "views",
+        "documentation": {}
+    },
+    {
+        "label": "simulate",
+        "kind": 2,
+        "importPath": "views",
+        "description": "views",
+        "peekOfCode": "def simulate():\n    questions = Question.objects.all().values_list(\"question\", flat=True)\n    models = Model.objects.all().values_list(\"model_value\", flat=True)\n    model_question_pairs = []\n    for model in models:\n        for question in questions:\n            pair = (model, question)\n            model_question_pairs.append(pair)\n    # Randomizing the list so that smaller and larger models aren't clustered together\n    random.shuffle(model_question_pairs)",
+        "detail": "views",
+        "documentation": {}
+    },
+    {
+        "label": "start_threads",
+        "kind": 2,
+        "importPath": "views",
+        "description": "views",
+        "peekOfCode": "def start_threads(response_data, is_simulation=False):\n    start_power = get_power()\n    peak_metrics = initialize_peak_metrics(start_power)\n    ollama_thread = threading.Thread(\n        target=get_response_from_ollama,\n        args=(response_data, peak_metrics),\n    )\n    monitor_thread = threading.Thread(target=monitor_resources, args=(peak_metrics,))\n    ollama_thread.start()\n    monitor_thread.start()",
+        "detail": "views",
+        "documentation": {}
+    },
+    {
+        "label": "plot",
+        "kind": 2,
+        "importPath": "views",
+        "description": "views",
+        "peekOfCode": "def plot():\n    model_objs = Model.objects.all()\n    model_names = [model_obj.model_name for model_obj in model_objs]\n    model_parameters = [model_obj.parameters for model_obj in model_objs]\n    questions = Question.objects.all()\n    execution_times_all = []\n    energy_uses_all = []\n    memory_uses_all = []\n    for model in model_objs:\n        execution_times = []",
+        "detail": "views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "wsgi",
+        "description": "wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "wsgi",
+        "documentation": {}
+    }
+]
