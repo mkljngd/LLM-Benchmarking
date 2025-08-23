@@ -3,8 +3,12 @@ import redis
 import json
 import time
 import uuid
+import os
+from dotenv import load_dotenv
 
-_pool = redis.ConnectionPool.from_url("redis://127.0.0.1:6379/1", decode_responses=True)
+load_dotenv()
+REDIS_URL = os.getenv("REDIS_URL", "redis://127.0.0.1:6379/1")
+_pool = redis.ConnectionPool.from_url(REDIS_URL, decode_responses=True)
 _redis_client = redis.Redis(connection_pool=_pool)
 
 

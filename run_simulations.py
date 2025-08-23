@@ -1,6 +1,8 @@
 import random
 import threading
+import matplotlib
 
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -13,11 +15,11 @@ from llm.redis_client import (
 from llm.utils import (
     get_all_models,
     get_power,
+    get_response_from_ollama,
     initialize_peak_metrics,
     monitor_resources,
     report_resource_usage,
 )
-from llm.utils import get_response_from_ollama
 
 
 # Start two threads: get LLM response and log resource usage
