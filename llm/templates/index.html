@@ -92,6 +92,9 @@
 <body>
     <div class="form-container">
         <div class="title">LLM Benchmarks</div>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <a href="{% url 'dashboard' %}" style="color: #7E57C2; text-decoration: none; font-size: 14px;">📊 View Chat History Dashboard</a>
+        </div>
         <form method="post">
             {% csrf_token %}
             <label for="model">Choose a model:</label>

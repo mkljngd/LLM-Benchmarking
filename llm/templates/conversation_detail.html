@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversation Details - LLM Chat</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #7E57C2, #ECEFF1);
+            margin: 0;
+            padding: 20px;
+            color: #263238;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #7E57C2, #5E35B1);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        
+        .back-btn {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: background 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .conversation-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .info-value {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .model-badge {
+            background: #7E57C2;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        
+        .content-section {
+            padding: 30px;
+        }
+        
+        .question-section, .response-section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 1.2em;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #7E57C2;
+        }
+        
+        .question-content, .response-content {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #7E57C2;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        
+        .metrics-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        
+        .metric-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .metric-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #7E57C2;
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .actions {
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1em;
+            margin: 0 10px;
+            transition: background 0.3s;
+        }
+        
+        .btn-primary {
+            background: #7E57C2;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5E35B1;
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background: #c82333;
+        }
+        
+        .no-metrics {
+            text-align: center;
+            color: #666;
+            padding: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Conversation Details</h1>
+            <a href="{% url 'dashboard' %}" class="back-btn">← Back to Dashboard</a>
+        </div>
+        
+        <div class="conversation-info">
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Model</div>
+                    <div class="info-value">
+                        <span class="model-badge">{{ conversation.model }}</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Timestamp</div>
+                    <div class="info-value">{{ conversation.formatted_time }}</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Conversation ID</div>
+                    <div class="info-value">{{ conversation.id }}</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="question-section">
+                <div class="section-title">Question</div>
+                <div class="question-content">{{ conversation.question }}</div>
+            </div>
+            
+            <div class="response-section">
+                <div class="section-title">Response</div>
+                <div class="response-content">{{ conversation.response }}</div>
+            </div>
+        </div>
+        
+        {% if conversation.metrics %}
+            <div class="metrics-section">
+                <div class="section-title">Performance Metrics</div>
+                <div class="metrics-grid">
+                    {% if conversation.metrics.execution_time %}
+                        <div class="metric-card">
+                            <div class="metric-value">{{ conversation.metrics.execution_time }}</div>
+                            <div class="metric-label">Execution Time</div>
+                        </div>
+                    {% endif %}
+                    
+                    {% if conversation.metrics.memory_used %}
+                        <div class="metric-card">
+                            <div class="metric-value">{{ conversation.metrics.memory_used }}</div>
+                            <div class="metric-label">Memory Used</div>
+                        </div>
+                    {% endif %}
+                    
+                    {% if conversation.metrics.energy_used %}
+                        <div class="metric-card">
+                            <div class="metric-value">{{ conversation.metrics.energy_used }}</div>
+                            <div class="metric-label">Energy Used</div>
+                        </div>
+                    {% endif %}
+                    
+                    {% if conversation.metrics.cpu_used %}
+                        <div class="metric-card">
+                            <div class="metric-value">{{ conversation.metrics.cpu_used }}</div>
+                            <div class="metric-label">CPU Used</div>
+                        </div>
+                    {% endif %}
+                    
+                    {% if conversation.metrics.peak_memory %}
+                        <div class="metric-card">
+                            <div class="metric-value">{{ conversation.metrics.peak_memory }}</div>
+                            <div class="metric-label">Peak Memory</div>
+                        </div>
+                    {% endif %}
+                    
+                    {% if conversation.metrics.peak_cpu %}
+                        <div class="metric-card">
+                            <div class="metric-value">{{ conversation.metrics.peak_cpu }}</div>
+                            <div class="metric-label">Peak CPU</div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% else %}
+            <div class="metrics-section">
+                <div class="no-metrics">No performance metrics available for this conversation.</div>
+            </div>
+        {% endif %}
+        
+        <div class="actions">
+            <a href="{% url 'dashboard' %}" class="btn btn-primary">Back to Dashboard</a>
+            <button class="btn btn-danger" onclick="deleteConversation('{{ conversation.id }}')">Delete Conversation</button>
+        </div>
+    </div>
+    
+    <script>
+        function deleteConversation(conversationId) {
+            if (confirm('Are you sure you want to delete this conversation?')) {
+                fetch('/api/delete-conversation/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        conversation_id: conversationId
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.href = '{% url "dashboard" %}';
+                    } else {
+                        alert('Error deleting conversation: ' + (data.error || 'Unknown error'));
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error deleting conversation');
+                });
+            }
+        }
+    </script>
+</body>
+</html>

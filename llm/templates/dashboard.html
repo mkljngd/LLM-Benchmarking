@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LLM Chat Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #7E57C2, #ECEFF1);
+            margin: 0;
+            padding: 20px;
+            color: #263238;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #7E57C2, #5E35B1);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        
+        .nav-links {
+            margin-top: 15px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: background 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .stats-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #7E57C2;
+        }
+        
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .filters {
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .filter-group label {
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .filter-group select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+        }
+        
+        .filter-group button {
+            padding: 8px 16px;
+            background: #7E57C2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .filter-group button:hover {
+            background: #5E35B1;
+        }
+        
+        .conversations {
+            padding: 20px;
+        }
+        
+        .conversation-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+        
+        .conversation-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .conversation-header {
+            background: #f8f9fa;
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .conversation-meta {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .model-badge {
+            background: #7E57C2;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        
+        .timestamp {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .conversation-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+        
+        .btn-primary {
+            background: #7E57C2;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5E35B1;
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background: #c82333;
+        }
+        
+        .conversation-content {
+            padding: 15px;
+        }
+        
+        .question {
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .response-preview {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .metric {
+            text-align: center;
+            font-size: 0.8em;
+        }
+        
+        .metric-value {
+            font-weight: 500;
+            color: #7E57C2;
+        }
+        
+        .metric-label {
+            color: #666;
+            font-size: 0.7em;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        
+        .pagination a, .pagination span {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+        
+        .pagination a:hover {
+            background: #7E57C2;
+            color: white;
+            border-color: #7E57C2;
+        }
+        
+        .pagination .current {
+            background: #7E57C2;
+            color: white;
+            border-color: #7E57C2;
+        }
+        
+        .pagination .disabled {
+            color: #999;
+            cursor: not-allowed;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        
+        .empty-state h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>LLM Chat Dashboard</h1>
+            <div class="nav-links">
+                <a href="{% url 'index' %}">New Chat</a>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+            </div>
+        </div>
+        
+        <div class="stats-section">
+            <h2>Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">{{ stats.total_conversations }}</div>
+                    <div class="stat-label">Total Conversations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ stats.unique_models }}</div>
+                    <div class="stat-label">Models Used</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ model_choices|length }}</div>
+                    <div class="stat-label">Available Models</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="filters">
+            <form method="get" style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                <div class="filter-group">
+                    <label for="model">Filter by Model:</label>
+                    <select name="model" id="model">
+                        <option value="">All Models</option>
+                        {% for model in model_choices %}
+                            <option value="{{ model }}" {% if model == current_model_filter %}selected{% endif %}>
+                                {{ model }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <button type="submit">Apply Filter</button>
+                    {% if current_model_filter %}
+                        <a href="{% url 'dashboard' %}" class="btn btn-primary">Clear</a>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+        
+        <div class="conversations">
+            {% if conversations %}
+                {% for conversation in conversations %}
+                    <div class="conversation-card">
+                        <div class="conversation-header">
+                            <div class="conversation-meta">
+                                <span class="model-badge">{{ conversation.model }}</span>
+                                <span class="timestamp">{{ conversation.formatted_time }}</span>
+                            </div>
+                            <div class="conversation-actions">
+                                <a href="{% url 'conversation_detail' conversation.id %}" class="btn btn-primary">View Details</a>
+                                <button class="btn btn-danger" onclick="deleteConversation('{{ conversation.id }}')">Delete</button>
+                            </div>
+                        </div>
+                        <div class="conversation-content">
+                            <div class="question"><strong>Question:</strong> {{ conversation.question }}</div>
+                            <div class="response-preview"><strong>Response:</strong> {{ conversation.response_preview }}</div>
+                            
+                            {% if conversation.metrics %}
+                                <div class="metrics">
+                                    {% if conversation.metrics.execution_time %}
+                                        <div class="metric">
+                                            <div class="metric-value">{{ conversation.metrics.execution_time }}</div>
+                                            <div class="metric-label">Execution Time</div>
+                                        </div>
+                                    {% endif %}
+                                    {% if conversation.metrics.memory_used %}
+                                        <div class="metric">
+                                            <div class="metric-value">{{ conversation.metrics.memory_used }}</div>
+                                            <div class="metric-label">Memory Used</div>
+                                        </div>
+                                    {% endif %}
+                                    {% if conversation.metrics.energy_used %}
+                                        <div class="metric">
+                                            <div class="metric-value">{{ conversation.metrics.energy_used }}</div>
+                                            <div class="metric-label">Energy Used</div>
+                                        </div>
+                                    {% endif %}
+                                    {% if conversation.metrics.cpu_used %}
+                                        <div class="metric">
+                                            <div class="metric-value">{{ conversation.metrics.cpu_used }}</div>
+                                            <div class="metric-label">CPU Used</div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+                
+                <div class="pagination">
+                    {% if has_previous %}
+                        <a href="?page={{ previous_page }}{% if current_model_filter %}&model={{ current_model_filter }}{% endif %}">&laquo; Previous</a>
+                    {% else %}
+                        <span class="disabled">&laquo; Previous</span>
+                    {% endif %}
+                    
+                    <span class="current">Page {{ current_page }}</span>
+                    
+                    {% if has_next %}
+                        <a href="?page={{ next_page }}{% if current_model_filter %}&model={{ current_model_filter }}{% endif %}">Next &raquo;</a>
+                    {% else %}
+                        <span class="disabled">Next &raquo;</span>
+                    {% endif %}
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <h3>No conversations found</h3>
+                    <p>Start a new chat to see your conversation history here.</p>
+                    <a href="{% url 'index' %}" class="btn btn-primary">Start New Chat</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    
+    <script>
+        function deleteConversation(conversationId) {
+            if (confirm('Are you sure you want to delete this conversation?')) {
+                fetch('/api/delete-conversation/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        conversation_id: conversationId
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        location.reload();
+                    } else {
+                        alert('Error deleting conversation: ' + (data.error || 'Unknown error'));
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error deleting conversation');
+                });
+            }
+        }
+    </script>
+</body>
+</html>
