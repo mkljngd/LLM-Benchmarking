@@ -1,5 +1,7 @@
+import os
 import random
 import threading
+
 import matplotlib
 
 matplotlib.use("Agg")
@@ -76,7 +78,6 @@ def simulate():
 
     model_question_pairs = [(m, q) for m in models for q in questions]
     random.shuffle(model_question_pairs)
-
     for model, question in model_question_pairs:
         response_data = {
             "response": "",
@@ -84,6 +85,7 @@ def simulate():
             "responses": False,
             "model": model,
         }
+        print(f"Evaluationg question: {question} using model:{model}")
         start_threads(response_data, is_simulation=True)
 
 
@@ -93,6 +95,8 @@ def plot():
     if not models:
         print("No models available for plotting.")
         return
+    output_dir = "output"
+    os.makedirs(output_dir, exist_ok=True)
 
     for model_value in models:
         metrics = get_model_metrics(model_value)
@@ -136,7 +140,8 @@ def plot():
 
         # Save the plot as a PNG file
         filename = f"{model_value.replace(':', '_').replace(' ', '_')}.png"
-        plt.savefig(filename)
+        filepath = os.path.join(output_dir, filename)
+        plt.savefig(filepath)
         plt.close()  # Close the plot to free memory
 
 
